@@ -13,7 +13,7 @@ public class Image extends JComponent {
 	
 	public Image() {
 		try {
-			ugatu = ImageIO.read(new File("src/Laba2/12.jpg"));
+			ugatu = ImageIO.read(new File("12.jpg"));
 		}
 		catch (IOException e) {
 			e.printStackTrace();
