@@ -11,6 +11,8 @@ public class subversion {
 	public static JFrame main_jbc;
 	public static JPanel main_panel;
 	public static JComboBox editComboBox;
+	public static JTextField my;
+	private JTextField wh;
 	public static final String[] items = {
 			"Переместить логотип УГАТУ в верхний правый угол",
 			"Переместить логотип УГАТУ в cередину",
@@ -30,7 +32,7 @@ public class subversion {
 		main_GUI.add(main_panel);
 
 
-		NewWindow button_info = new NewWindow();
+		NewWindow button_info = new NewWindow(wh);
 		JButton button_inf = new JButton("Информация"); // кнопка отображения информации в другом окне
 		button_inf.addActionListener(button_info);
 		button_inf.setBounds(50,200,150,30);
@@ -61,6 +63,13 @@ public class subversion {
 		laba_info.setBounds(120,0,150,30);
 		main_panel.add(laba_info);
 
+		JLabel laba_inf = new JLabel("Пожелания:"); // Отображение текста или изображения
+		laba_inf.setBounds(50,120,150,20);
+		main_panel.add(laba_inf);
+		my = new JTextField();
+		my.setBounds(150,120,150,20);
+		main_panel.add(my);
+
 
 		JButton button_exit = new JButton("Выход"); // добавляем кнопку
 		button_exit.setBounds(270,200,100,40);
@@ -73,6 +82,9 @@ public class subversion {
 
 		main_GUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // закрытие окна JFrame и процесса Java
 	}
+	public void setDateClay(JTextField my) {
+		this.wh = my;
+		}
 
 
 	public static void main(String [] args) {
