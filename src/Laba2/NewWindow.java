@@ -1,3 +1,5 @@
+package src.Laba2;
+
 import java.awt.event.*;
 import javax.swing.*;
 
@@ -7,17 +9,17 @@ public class NewWindow extends AbstractAction{
 
 	public void actionPerformed(ActionEvent e) {
 		
-		JFrame info = new JFrame("����������");//�������� ���� "����������"
+		JFrame info = new JFrame("Информация");
 		info.setBounds(500,400,400,300);
 		
-		JLabel infoR = new JLabel("���� ���������� - 816");//���������� � ������������� � ����
+		JLabel infoR = new JLabel("Юлия Реутова - 816");
 		infoR.setBounds(130, 50, 300, 50);
 		
-		JLabel infoA = new JLabel("���� ������������� - 389");
+		JLabel infoA = new JLabel("Алсу Ахмадуллина - 389");
 		infoA.setBounds(130, 90, 300, 50);
 	
 		
-		JButton returnToMainButton = new JButton("�����");
+		JButton returnToMainButton = new JButton("Выход");
 		returnToMainButton.setBounds(100,200,200,30);
 		info.add(returnToMainButton);
 		returnToMainButton.addActionListener(m -> {
