@@ -16,7 +16,7 @@ public class subversion {
 	public static JComboBox editComboBox;
 	public static JTextField my;
 	private String wh;
-	private String str;
+	private String vn;
 	public static final String[] items = {
 			"Переместить логотип УГАТУ в верхний правый угол",
 			"Переместить логотип УГАТУ в cередину",
@@ -75,7 +75,7 @@ public class subversion {
 		my.setBounds(150,120,150,20);
 		main_panel.add(my);
 
-		str = my.getText();
+		vn = my.getText();
 
 
 		JButton button_exit = new JButton("Выход"); // добавляем кнопку
@@ -94,7 +94,7 @@ public class subversion {
 	}
 
 	public subversion (String wh) {
-		this.wh = str;
+		this.wh = vn;
 		}
 
 	public static void main(String [] args) {
