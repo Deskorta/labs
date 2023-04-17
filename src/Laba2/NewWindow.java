@@ -3,13 +3,11 @@ package src.Laba2;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class NewWindow extends AbstractAction{
+public class NewWindow extends AbstractAction {
 	private static JLabel lineLable1;
-	//private double lg;
-	private JTextField wh;
+	private String wh;
 
 	private static final long serialVersionUID = 1L;
-	//private final JLabel lineLable1;
 
 	public void actionPerformed(ActionEvent e) {
 		
@@ -21,7 +19,7 @@ public class NewWindow extends AbstractAction{
 		
 		JLabel infoA = new JLabel("Алсу Ахмадуллина - 389");
 		infoA.setBounds(130, 90, 300, 50);
-	
+
 		
 		JButton returnToMainButton = new JButton("Выход");
 		returnToMainButton.setBounds(100,200,200,30);
@@ -30,7 +28,11 @@ public class NewWindow extends AbstractAction{
 			info.dispose();
 			
 		});
-		
+
+		subversion subver = new subversion(wh);
+		lineLable1 = new JLabel("Ваши пожелания:" + wh);
+		lineLable1.setBounds(130, 140, 300, 50);
+
 
 		info.add(infoR);
 		info.add(infoA);
@@ -40,8 +42,10 @@ public class NewWindow extends AbstractAction{
 		info.setVisible(true);
 	}
 
-	public NewWindow (JTextField wh) {
-		lineLable1 = new JLabel("Ваши пожелания:" + wh);
-		lineLable1.setBounds(130, 110, 300, 50);
-	}
+	//public static void newWindow(String wh) {
+		//subversion subver = new subversion(wh);
+		//lineLable1 = new JLabel("Ваши пожелания:" + wh);
+		//lineLable1.setBounds(130, 140, 300, 50);
+
+	//}
 }

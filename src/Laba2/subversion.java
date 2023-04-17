@@ -1,9 +1,12 @@
 package src.Laba2;
 
+import javafx.scene.input.InputMethodTextRun;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;//библиотека для события слушателя
 
 import javax.swing.*; // Библиотека для GUI (построена на основе awt)
+import java.util.Scanner;
 
 
 public class subversion {
@@ -12,7 +15,8 @@ public class subversion {
 	public static JPanel main_panel;
 	public static JComboBox editComboBox;
 	public static JTextField my;
-	private JTextField wh;
+	private String wh;
+	private String str;
 	public static final String[] items = {
 			"Переместить логотип УГАТУ в верхний правый угол",
 			"Переместить логотип УГАТУ в cередину",
@@ -20,7 +24,7 @@ public class subversion {
 	};
 
 
-	public subversion() {
+	public subversion () {
 		JFrame main_GUI = new JFrame("subversion");	// создание графического окна
 		main_GUI.setTitle ("Hello!");
 		main_GUI.setBounds(400,400,400,350);
@@ -32,7 +36,7 @@ public class subversion {
 		main_GUI.add(main_panel);
 
 
-		NewWindow button_info = new NewWindow(wh);
+		NewWindow button_info = new NewWindow();
 		JButton button_inf = new JButton("Информация"); // кнопка отображения информации в другом окне
 		button_inf.addActionListener(button_info);
 		button_inf.setBounds(50,200,150,30);
@@ -66,9 +70,12 @@ public class subversion {
 		JLabel laba_inf = new JLabel("Пожелания:"); // Отображение текста или изображения
 		laba_inf.setBounds(50,120,150,20);
 		main_panel.add(laba_inf);
+		
 		my = new JTextField();
 		my.setBounds(150,120,150,20);
 		main_panel.add(my);
+
+		str = my.getText();
 
 
 		JButton button_exit = new JButton("Выход"); // добавляем кнопку
@@ -82,10 +89,13 @@ public class subversion {
 
 		main_GUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // закрытие окна JFrame и процесса Java
 	}
-	public void setDateClay(JTextField my) {
-		this.wh = my;
-		}
+	public String getWh(){
+		return wh;
+	}
 
+	public subversion (String wh) {
+		this.wh = str;
+		}
 
 	public static void main(String [] args) {
 		subversion student = new subversion();
